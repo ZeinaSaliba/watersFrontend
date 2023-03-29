@@ -1,0 +1,21 @@
+{
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "start":"Start",
+    "choose_a_skills": "Choose a skills",
+    "mcq": "MCQ",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "test_result": "Test Result",
+    "good_effort":"Good effort!",
+    "you_scored":"you scored",
+    "out_of":"out of",
+    "you_can_always...":" You can always try again to improve your score!",
+    "thanks_for_taking":"  Thank you for completing the test. Please click on the continue button to view your complete score report.",
+    "congratulations_text":" Congratulations keep it up, you're one of 200 other that took this test.",
+    "continue": "Continue",
+    "result":"Result",
+    "great_job":"Great job!"
+}

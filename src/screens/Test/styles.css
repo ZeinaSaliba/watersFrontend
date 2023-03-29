@@ -1,0 +1,125 @@
+.containerTest {
+  width: 100vw;
+  height: 82vh;
+  margin-top: 18vh;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+.titleTestResult {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+  margin-right: 10vw;
+}
+
+.questionContainer {
+  margin-top: 5vh;
+  margin-left: 10vw;
+}
+.questionTestResultContainer {
+  height: 82vh;
+  margin-top: 16vh;
+  margin-left: 10vw;
+}
+
+.question {
+  font-size: 30px;
+}
+
+.choices {
+  margin-left: 2vw;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.choice {
+  margin-top: 2vh;
+}
+
+label {
+  font-size: 25px;
+  margin-left: 1vw;
+}
+
+.selectionBox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.buttonsContainer {
+  margin-top: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 20vw;
+  height: 10vh;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-next {
+  color: #252525;
+  background-color: #ffb2b2;
+  border: 1px solid #252525;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-prev {
+  color: #252525;
+  background-color: #ffb2b2;
+  border: 1px solid #252525;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-submit {
+  border: none;
+  color: white;
+  background-color: #252525;
+}
+.btn-cont {
+  margin-right: 18vw;
+  background-color: #ffb2b2;
+  border-radius: 5px;
+}
+
+/* score  */
+.score {
+  font-size: 25px;
+  font-weight: 500;
+  color: #252525;
+}
+
+.thanks {
+  margin-top: 3vh;
+  color: #a5a5a5;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30vh;
+}
+
+.congratulation {
+  font-size: 25px;
+  color: #252525;
+  max-width: 35vw;
+}

@@ -1,0 +1,103 @@
+/* h1 {
+    font-size: 32px;
+    color: #252525;
+  } */
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .leftSide {
+    max-width: 20vw;
+    width: 20vw;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .backgroundContainer {
+    background-color: white;
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .triangle{
+    width: 0;
+    height: 0;
+    border-left: 4vw solid #ffb2b2;
+    border-right: 0vw solid transparent;
+    border-top: 8vh solid #d9d9d9;
+    position: absolute;
+    top: 10vh;
+    left: 81.2vw;
+   }
+  .inputContainer {
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .inputStyle {
+    width: 35%;
+    height: 8vh;
+    border: 1px solid #A5A5A5;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 2vw;
+    color: #252525;
+    display: flex;
+    align-items: center;
+  }
+  
+  input:focus {
+    border: 1px solid #A5A5A5;
+  }
+  
+  input:focus-visible {
+    outline: #D5D5D5 auto 1px;
+  }
+  
+  input::placeholder{
+    color: #D5D5D5;
+    font-size: 16px;
+    position: relative;
+    top: 5%;
+  }
+  
+  .mt-5 {
+    margin-top: 5vh;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+  }
+  
+  .login {
+    background-color: #FFB2B2;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    width: 45%;
+    height: 9vh;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }

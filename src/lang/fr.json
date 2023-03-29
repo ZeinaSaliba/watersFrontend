@@ -1,0 +1,21 @@
+{
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "login": "Connexion",
+    "start":"Démarrer",
+    "choose_a_skills": "Choisissez une compétence",
+    "mcq": "QCM",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "test_result": "Résultat du test",
+    "good_effort":"Bon effort!",
+    "you_scored":"vous avez marqué",
+    "out_of":"sur",
+    "you_can_always...":" Vous pouvez toujours réessayer pour améliorer votre score !",
+    "thanks_for_taking":" Merci d'avoir terminé le test. Veuillez cliquer sur le bouton Continuer pour afficher votre rapport de score complet.",
+    "congratulations_text":" Félicitations, continuez comme ça, vous êtes l'un des 200 autres à avoir passé ce test.",
+    "continue": "Continuer",
+    "result":"Résultat",
+    "great_job":"Félicitations!"
+}
