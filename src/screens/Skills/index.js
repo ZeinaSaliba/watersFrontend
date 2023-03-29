@@ -23,22 +23,30 @@ export default function Skills(props) {
     setLanguageActive(!languageActive);
   };
 
+  // This function is called when the user clicks on a skill to start a test.
   const start = (chosen) => {
+    // The 'skills' array contains all available skills to be tested.
+    // Find the skill that matches the user's choice by its ID.
     let id = skills.find((item) => chosen === item?.id);
+    // Navigate to the '/test' route and pass the selected skill ID as a state parameter.
     navigate("/test", { state: { id } });
-  }
+  };
+
   useEffect(() => {
     setLoading(true);
-    fetch ('http://localhost:3003/api/skills/all')
-    .then((res) => res.json())
-    .then((res) => {
-      setLoading(false);
-      setSkills(res);
-    })
-    .catch((err) => {
-      console.log('skills screen', err);
-    });
+    // fetch the skills data from the local API
+    fetch("http://localhost:3003/api/skills/all")
+      .then((res) => res.json())
+      // set loading state to false and update the skills state with the fetched data
+      .then((res) => {
+        setLoading(false);
+        setSkills(res);
+      })
+      .catch((err) => {
+        console.log("skills screen", err);
+      });
   }, []);
+
   return loading ? (
     <Loader />
   ) : (
@@ -54,7 +62,9 @@ export default function Skills(props) {
               <div>
                 <button
                   className="button"
-                  onClick={()=>{start(item?.id)}}
+                  onClick={() => {
+                    start(item?.id);
+                  }}
                 >
                   {t("start")}
                 </button>

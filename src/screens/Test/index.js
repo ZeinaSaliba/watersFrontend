@@ -72,12 +72,11 @@ export default function Test(props) {
       // Copy the previous select object using the spread operator
       let prevSelect = { ...select };
       // If the previous question exists, set its selected value as the selectedValue.
-      if (index - 1 > 0) {
+      if (index - 1 >= 0) {
         setSelectedValue(prevSelect[test[index - 1].question]?.value);
       }
     }
   };
-
 
   const next = () => {
     // Check if the current index is less than the length of the test.
@@ -94,7 +93,6 @@ export default function Test(props) {
       setIndex(index + 1);
     }
   };
-  
 
   const submit = () => {
     // make a copy of the previous select object.
@@ -142,7 +140,13 @@ export default function Test(props) {
                     onChange={handleRadioChange}
                     value={el?.value}
                   />
-                  <label>{el?.label}</label>
+                  <label>
+                    {languageActive == true &&
+                    el?.label_fr != null &&
+                    el?.label_fr != ""
+                      ? el?.label_fr
+                      : el.label}
+                  </label>
                 </div>
               ))}
             </div>
