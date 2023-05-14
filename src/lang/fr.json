@@ -17,5 +17,11 @@
     "congratulations_text":" Félicitations, continuez comme ça, vous êtes l'un des 200 autres à avoir passé ce test.",
     "continue": "Continuer",
     "result":"Résultat",
-    "great_job":"Félicitations!"
+    "great_job":"Félicitations!",
+    "credentials":"Veuillez vérifier vos informations d'identification",
+    "signupButton":"Cliquez ici pour vous inscrire",
+    "signup":"S'inscrire",
+    "name":"Nom",
+    "last_name": "Nom de famille",
+    "invalid_password": "Le mot de passe doit comporter au moins 8 caractères, contenir au moins une lettre majuscule, une lettre minuscule et un chiffre"
 }

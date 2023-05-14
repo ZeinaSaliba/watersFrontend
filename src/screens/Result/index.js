@@ -21,22 +21,30 @@ export default function Result() {
     setLanguageActive(!languageActive);
   };
 
+  // This useEffect hook runs when the component mounts
   useEffect(() => {
+    // Get the logged-in user's name from local storage
     let user = localStorage.getItem("logedUser");
+    // Get some data from local storage
     let data = localStorage.getItem("data");
+    // Parse the data from a JSON string into an array
     data = JSON.parse(data);
-    data.forEach(element => {
-      if(element.userName == user){
+    // Loop through the array of data
+    data.forEach((element) => {
+      // If the user name matches an element in the data array...
+      if (element.userName == user) {
         data = element.skills;
         return;
       }
     });
+
+    // Set the card item state variable to the user's skills
     setCardItem(data);
   }, []);
-  
+
   return (
     <Fragment>
-      <Header pageName={t('result')} button={button} />
+      <Header pageName={t("result")} button={button} />
       <div className="grid-Container">
         {cardItem.map((item, key) => {
           let note = item?.score >= 50;
@@ -75,7 +83,7 @@ export default function Result() {
               navigate("/Skills");
             }}
           >
-            {t('continue')}
+            {t("continue")}
           </button>
         </div>
       </div>

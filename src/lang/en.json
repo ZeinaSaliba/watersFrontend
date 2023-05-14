@@ -17,5 +17,11 @@
     "congratulations_text":" Congratulations keep it up, you're one of 200 other that took this test.",
     "continue": "Continue",
     "result":"Result",
-    "great_job":"Great job!"
+    "great_job":"Great job!",
+    "credentials":"Please enter valid credentials",
+    "signupButton": "click here to sign up",
+    "name": "Name",
+    "last_name": "Last Name",
+    "signup": "Sign Up",
+    "invalid_password": "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter and one number"
 }

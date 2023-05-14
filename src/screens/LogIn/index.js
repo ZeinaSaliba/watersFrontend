@@ -4,6 +4,7 @@ import { useState } from "react"; // Imports the 'useState' hook from React libr
 import { useNavigate } from "react-router-dom"; // Imports the 'useNavigate' hook from react-router-dom library
 import { t } from "i18next"; // Imports the 't' function from i18next library
 import { useTranslation } from "react-i18next"; // Imports the 'useTranslation' hook from react-i18next library
+import { postRequest } from "../../commons/api";
 
 // This is the main component that will be used in the login page
 export default function LogIn() {
@@ -28,19 +29,25 @@ export default function LogIn() {
     setLanguageActive(!languageActive); // Toggles the current value of 'languageActive'
   };
 
+  const validatePassword = (email) => {
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    return re.test(email);
+  }
+
   // This function handles the login functionality when called
   const login = () => {
+
+    if (!validatePassword(password)) {
+      alert(t("invalid_password"));
+      return;
+    }
+
     // A POST request is sent to the login API, and the username and password entered by the user are sent in the request body
-    fetch("http://localhost:3003/api/user/login", {
-      method: "POST", // The request method is POST
-      headers: { // Request headers
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userName: username, password: password }), // Request body with the entered username and password
-    })
-      .then((res) => res.json()) // The response is converted to a JSON object
-      .then((res) => { 
+    postRequest("user/login", 
+  
+    { userName: username, password: password }, // Request body with the entered username and password
+    
+      res => { 
         // If the login is successful, the logged-in user's information is stored in the local storage of the browser
         localStorage.setItem("logedUser", res?.userinfo?.userName);
         // If the 'data' already exists in the local storage, the current user's information is added to it
@@ -63,13 +70,18 @@ export default function LogIn() {
         if (res?.status == "Success") { // If the login is successful
           navigate("/Skills"); // Navigate to the Skills page
         } else {
-          alert(`Please enter valid credentials`); // Otherwise, give an alert message asking the user to enter valid credentials
+          alert(t('credentials')); // Otherwise, give an alert message asking the user to enter valid credentials
         }
-      })
-      .catch((err) => { // If any error occurs, log the error message in the console
+      },
+      err => { // If any error occurs, log the error message in the console
         console.log("login screen", err);
-      });
+      }
+    );
   };
+
+  const signup=()=>{
+    navigate("/SignUp");
+  }
 
   // The following code is for the layout of the login page using HTML and CSS with JSX syntax. It includes input fields for username and password and a button to log in.
   return (
@@ -107,6 +119,11 @@ export default function LogIn() {
           <div className="buttonContainer mt-5">
             <button className="login" onClick={login}>
               {t("login")} {/* Translated text for the login button */}
+            </button>
+          </div>
+          <div className="secondButtonContainer mt-5">
+            <button className="signup"  onClick={signup}>
+              {t("signupButton")}
             </button>
           </div>
         </div>
